@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <!-- Meta -->
+     <meta charset="UTF-8">
+     <meta name="keywords" content="HTML,CSS,JavaScript,note-taking-app">
+     <meta name="author" content="Oyedeji Peace">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Title -->
+     <title>Note-Taking-App</title>
+     <!-- css -->
+     <link rel="stylesheet" type="text/css" href="index.css" />
+     <!-- font -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lobster|Oxygen|PT+Serif" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header">Notes Taking App</div>
+        <div id='color-select'>
+            <div class='color-box white'></div>
+            <div class='color-box orange'></div>
+            <div class='color-box banana'></div>
+            <div class='color-box honeydew'></div>
+            <div class='color-box flora'></div>
+            <div class='color-box aqua'></div>
+            <div class='color-box ice'></div>
+            <div class='color-box sky'></div>
+            <div class='color-box orchid'></div>
+            <div class='color-box lavendar'></div>
+            <div class='color-box pink'></div>
+        </div>
+    </header>
+    <main>
+        <div class="note-list">
+            <div id="list-head">
+                <b>Your Notes</b> <i>(click to edit/delete)</i>
+            </div>
+            <div>
+                <noteList>
+                    <div id='listed' onclick="chooseNote(event)">
+                    </div>
+                </noteList>
+            </div>
+        </div>
+        <div class="note-field">
+            <div id="note-head">
+                <b>Your Notepad</b>
+                <span id="edit-mode" class="no-display">
+                    <i> (edit mode) </i>
+                </span>
+            </div>
+            <div>
+                <notepad id="notepad">
+                    <div id="note-title">
+                        <input id="title-field" type="text" placeholder="Enter note title">
+                    </div>
+                    <div id="note-body">
+                        <textarea id="body-field"></textarea>
+                    </div>
+                </notepad>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <button id="btn-save" onclick="createNote()">Save</button>
+        <button id="btn-delete" onclick="deleteNote()">Delete</button>
+    </footer>
+</body>
+<script type='text/javascript' src='index.js'></script>
+
+</html>
